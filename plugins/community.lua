@@ -8,5 +8,6 @@ return {
   { import = "astrocommunity.editing-support.suda-vim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.vim-move" },
+  {import = "astrocommunity.markdown-and-latex.vimtex"}
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
