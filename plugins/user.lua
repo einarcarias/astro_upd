@@ -12,7 +12,7 @@ return {
   {
     -- nice scrolling
   "karb94/neoscroll.nvim",
-  event = "BufRead"
+  event = "BufRead",
   config = function ()
     require('neoscroll').setup {}
   end
