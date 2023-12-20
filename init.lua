@@ -61,7 +61,7 @@ return {
 
     config = {
       ltex = {
-        on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
+        -- on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
         settings = {
           ltex = {
             language = "en-GB",
