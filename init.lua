@@ -26,6 +26,9 @@ return {
     underline = true,
   },
   lsp = {
+    -- setup_handlers = {
+    --   ltex = function(_, opt) require("ltex-ls").setup { server = opt } end,
+    -- },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -33,7 +36,7 @@ return {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
-          "tex"
+          -- "tex"
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -53,10 +56,31 @@ return {
     servers = {
       -- "latexindent"
       -- "pyright"
-      -- "ltex"
+      "ltex",
     },
-},
 
+    config = {
+      ltex = {
+        on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
+        settings = {
+          ltex = {
+            language = "en-GB",
+            diagnosticSeverity = "information",
+            setenceCacheSize = 2000,
+            additionalRules = {
+              enablePickyRules = true,
+              motherTongue = "en-GB",
+            },
+            trace = { server = "verbose" },
+            -- dictionary = "~/.config/lvim/dict/", -- added global dictionary path
+            completionEnabled = "true",
+            checkFrequency = "edit",
+            statusBarItem = "true",
+          },
+        },
+      },
+    },
+  },
 
   -- Configure require("lazy").setup() options
   lazy = {
