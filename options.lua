@@ -8,12 +8,11 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
     linebreak = true,
-    breakindent = true
+    breakindent = true,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
     maplocalleader = ",", -- set localleader
-    vimtex_view_method = "zathura", -- zathura to open pdf
     spelllang="en_gb",
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start

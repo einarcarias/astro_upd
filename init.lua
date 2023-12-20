@@ -18,14 +18,13 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "kanagawa-dragon",
+  colorscheme = "kanagawa",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
   },
-
   lsp = {
     -- customize lsp formatting options
     formatting = {
@@ -49,12 +48,15 @@ return {
       --   return true
       -- end
     },
+
     -- enable servers that you already have installed without mason
     servers = {
       -- "latexindent"
       -- "pyright"
+      -- "ltex"
     },
-  },
+},
+
 
   -- Configure require("lazy").setup() options
   lazy = {

@@ -8,6 +8,24 @@ return {
   { import = "astrocommunity.editing-support.suda-vim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.vim-move" },
-  {import = "astrocommunity.markdown-and-latex.vimtex"}
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
+  {import = "astrocommunity.markdown-and-latex.vimtex"},
+  {
+  "lervag/vimtex",
+  lazy = false, -- lazy-loading will disable inverse search
+  config = function()
+    vim.api.nvim_create_autocmd({ "FileType" }, {
+      group = vim.api.nvim_create_augroup("lazyvim_vimtex_conceal", { clear = true }),
+      pattern = { "bib", "tex" },
+      callback = function()
+        vim.wo.conceallevel = 2
+      end,
+    })
+
+    vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
+    vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
+  end,
+},
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

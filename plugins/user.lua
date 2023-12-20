@@ -17,21 +17,53 @@ return {
     require('neoscroll').setup {}
   end
   },
---   {
---   "lervag/vimtex",
---   lazy = false, -- lazy-loading will disable inverse search
---   config = function()
---     vim.api.nvim_create_autocmd({ "FileType" }, {
---       group = vim.api.nvim_create_augroup("lazyvim_vimtex_conceal", { clear = true }),
---       pattern = { "bib", "tex" },
---       callback = function()
---         vim.wo.conceallevel = 2
---       end,
---     })
---
---     vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
---     vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
---   end,
--- },
+  -- latex stuff
+  {
+    "jhofscheier/ltex-utils.nvim",
+    dependencies = {
+        "neovim/nvim-lspconfig",
+        "nvim-telescope/telescope.nvim",
+        "nvim-telescope/telescope-fzf-native.nvim", -- optional
+    },
+    opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        dictionary = {
+            -- use vim internal dictionary to add unkown words
+            use_vim_dict = true,
+            -- show/suppress vim command output such as `spellgood` or `mkspell`
+            vim_cmd_output = false,
+        },
+
+    },
+config = function(opts)
+      require("ltex-utils").setup(opts)
+      require("lspconfig").ltex.setup({
+        capabilities = require("lvim.lsp").common_capabilities(),
+        on_init = require("lvim.lsp").common_on_init,
+        on_attach = function(client, bufnr)
+            require("ltex-utils").on_attach(bufnr)
+            require("lvim.lsp").common_on_attach(client, bufnr)
+        end,
+        settings = {
+            ltex = {
+                language = "en-GB",
+                diagnosticSeverity = "information",
+                setenceCacheSize = 2000,
+                additionalRules = {
+                    enablePickyRules = true,
+                    motherTongue = "en-GB",
+                },
+                trace = { server = "verbose" },
+                -- dictionary = "~/.config/lvim/dict/", -- added global dictionary path
+                completionEnabled = "true",
+                checkFrequency = "edit",
+                statusBarItem = "true",
+            },
+        },
+      })
+    end,
+  },
 }
 
