@@ -68,7 +68,7 @@ return {
             diagnosticSeverity = "information",
             setenceCacheSize = 2000,
             additionalRules = {
-              enablePickyRules = true,
+              enablePickyRules = false,
               motherTongue = "en-GB",
             },
             trace = { server = "verbose" },

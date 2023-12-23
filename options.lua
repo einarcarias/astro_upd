@@ -9,8 +9,8 @@ return {
     wrap = true, -- sets vim.opt.wrap
     linebreak = true,
     breakindent = true,
-    spellfile = vim.api.nvim_call_function("stdpath", {"config"}) .. "/spell/en.utf-8.add",
-    spelllang="en_gb",
+    spellfile = vim.api.nvim_call_function("stdpath", { "config" }) .. "/spell/en.utf-8.add",
+    spelllang = "en_gb",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
