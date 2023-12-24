@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
-  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
@@ -29,5 +29,22 @@ return {
       vim.g.vimtex_quickfix_method = vim.fn.executable "pplatex" == 1 and "pplatex" or "latexlog"
     end,
   },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("copilot").setup {
+
+        filetypes = {
+          tex = false,
+        },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 75,
+        },
+      }
+    end,
+  },
 }
