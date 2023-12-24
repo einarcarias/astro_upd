@@ -21,11 +21,8 @@ return {
           :with_cr(cond.none()),
       },
       -- disable for .vim files, but it work for another filetypes
-      Rule("a", "a", "-vim"),
+      Rule("a", "a", "-vim")
       -- rule for autopairs to not close when \ is added
-      Rule("(", ")", { "tex", "latex" })
-        :with_pair(cond.not_before_regex "\\")
-      )
     )
   end,
 }
