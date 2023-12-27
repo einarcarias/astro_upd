@@ -15,7 +15,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
-  {
+  { --vimtex settings
     "lervag/vimtex",
     lazy = false, -- lazy-loading will disable inverse search
     config = function()
@@ -31,7 +31,7 @@ return {
   },
 
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  {
+  { --copilot settings
     "zbirenbaum/copilot.lua",
     config = function()
       require("copilot").setup {
@@ -46,5 +46,10 @@ return {
         },
       }
     end,
+  },
+  -- todo settings
+  {
+    "folke/todo-comments-nvim",
+    keys = { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open Telescope with todo items" },
   },
 }
