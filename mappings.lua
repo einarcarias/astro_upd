@@ -32,6 +32,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>a"] = { name = "OpenAi" },
     ["<leader>ao"] = { ":NeoAIToggle<cr>", desc = "Open/Close Prompt" },
+    -- to do
+    ["<leader>fd"] = { ":TodoTelescope<cr>", desc = "find todo list" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

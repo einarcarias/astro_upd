@@ -47,9 +47,4 @@ return {
       }
     end,
   },
-  -- todo settings
-  {
-    "folke/todo-comments-nvim",
-    keys = { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open Telescope with todo items" },
-  },
 }
