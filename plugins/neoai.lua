@@ -4,7 +4,7 @@ return {
     "MunifTanjim/nui.nvim",
   },
   event = {
-    "BufRead",
+    "User AstroFile",
   },
   cmd = {
     "NeoAI",
