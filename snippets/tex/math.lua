@@ -1,6 +1,6 @@
 return {
   -- angle
-  s({ trig = "\ang", dscr = "Expands '\ang' into '\\ang{}'" }, fmta([[\ang{<>}]], { i(1) })),
+  s({ trig = "ang", dscr = "Expands 'ang' into '\\ang{}'" }, fmta([[\ang{<>}]], { i(1) })),
   -- float
   s(
     { trig = "subfloat", dscr = "Expands 'subfloat' into 'subfloat[]{}'" },

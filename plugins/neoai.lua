@@ -43,10 +43,10 @@ return {
           desc = "fix text with AI",
           use_context = true,
           prompt = [[
-                  Please rewrite the text to make it more readable, clear,
+                  First analyse my writing style. Please rewrite the text to make it more readable, clear,
                   concise, and fix any grammatical, punctuation, or spelling
-                  errors in en_GB. Write it in post-doctorate style but dont use uncommon words. 
-                  Also, it must be in 3rd person. Preserve the latex notations used.
+                  errors in en_GB. Write it in doctorate research level but use common words easily understoon by engineers. 
+                  Also, it must be in 3rd person passive voice. Preserve the latex notations used. You dont have to rewrite the words I'm using if its a more common word.
               ]],
           modes = { "v" },
           strip_function = nil,
