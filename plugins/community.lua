@@ -15,6 +15,16 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
+  {
+    "gbprod/yanky.nvim",
+    keys = {
+      {
+        "<leader>py",
+        function() require("telescope").extensions.yank_history.yank_history {} end,
+        desc = "Open Yank History",
+      },
+    },
+  },
   { --vimtex settings
     "lervag/vimtex",
     lazy = false, -- lazy-loading will disable inverse search

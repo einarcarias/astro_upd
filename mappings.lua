@@ -34,12 +34,19 @@ return {
     ["<leader>ao"] = { ":NeoAIToggle<cr>", desc = "Open/Close Prompt" },
     -- to do
     ["<leader>fd"] = { ":TodoTelescope<cr>", desc = "find todo list" },
+    -- search and replace
+    ["<leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>", desc = "search word and replace" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   v = {
 
     ["<leader>a"] = { name = "OpenAi" },
+  },
+  x = {
+
+    -- pasting
+    ["<M-p>"] = { '"_dP', desc = "Paste without yanking" },
   },
   t = {
     -- setting a mapping to false will disable it
