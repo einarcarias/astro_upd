@@ -34,6 +34,8 @@ return {
     ["<leader>ao"] = { ":NeoAIToggle<cr>", desc = "Open/Close Prompt" },
     -- to do
     ["<leader>fd"] = { ":TodoTelescope<cr>", desc = "find todo list" },
+    -- pasting
+    ["M-p"] = { '"_dp', desc = "Paste without yanking" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
