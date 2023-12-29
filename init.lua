@@ -79,6 +79,35 @@ return {
           },
         },
       },
+      texlab = {
+        settings = {
+          texlab = {
+            auxDirectory = ".",
+            bibtexFormatter = "texlab",
+            build = {
+              executable = "latexmk",
+              args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+              forwardSearchAfter = true,
+              onSave = true,
+            },
+            chktex = {
+              onEdit = true,
+              onOpenAndSave = true,
+            },
+            diagnosticsDelay = 300,
+            formatterLineLength = 80,
+            forwardSearch = {
+              args = { "--synctex-forward", "%l:1:%f", "%p" },
+              executable = "zathura",
+              onSave = true,
+            },
+            latexFormatter = "latexindent",
+            latexindent = {
+              modifyLineBreaks = true,
+            },
+          },
+        },
+      },
       rust_analyzer = {
         settings = {
           ["rust-analyzer"] = {
