@@ -10,7 +10,7 @@ return {
   --
   -- figures
   s(
-    { trig = "\fig", dscr = "Expands 'fig' into '\fig{}'" },
+    { trig = "fig", dscr = "Expands 'fig' into '\fig{}'" },
     fmta(
       [[\begin{figure}[H]
       \centering
