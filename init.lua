@@ -97,8 +97,8 @@ return {
             diagnosticsDelay = 300,
             formatterLineLength = 80,
             forwardSearch = {
-              args = {},
-              executable = "open-sumatra.sh",
+              args = { "-reuse-instance", "%p", "-forward-search", "%f", "%l" },
+              executable = "sumatrapdf.exe",
               onSave = true,
             },
             latexFormatter = "latexindent",

@@ -15,7 +15,7 @@ return {
   g = {
     mapleader = " ", -- sets vim.g.mapleader
     maplocalleader = ",", -- set localleader
-    vimtex_view_general_viewer = "open-sumatra.sh", -- zathura to open pdf
+    vimtex_view_general_viewer = "sumatrapdf.exe", -- zathura to open pdf
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
@@ -26,16 +26,15 @@ return {
     clipboard = {
       name = "WslClipboard",
       copy = {
-        ['+'] = 'clip.exe',
-        ['*'] = 'clip.exe',
+        ["+"] = "clip.exe",
+        ["*"] = "clip.exe",
       },
       paste = {
-        ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
       },
       cache_enabled = 0,
-    }
-
+    },
   },
 }
 -- If you need more control, you can use the function()...end notation
