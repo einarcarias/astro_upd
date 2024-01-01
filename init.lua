@@ -82,25 +82,25 @@ return {
       texlab = {
         settings = {
           texlab = {
-            -- auxDirectory = ".",
-            -- bibtexFormatter = "texlab",
-            -- build = {
-            --   executable = "latexmk",
-            --   args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
-            --   forwardSearchAfter = true,
-            --   onSave = true,
-            -- },
+            auxDirectory = ".",
+            bibtexFormatter = "texlab",
+            build = {
+              executable = "latexmk",
+              args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-c", "%f" },
+              forwardSearchAfter = true,
+              onSave = true,
+            },
             chktex = {
-              onEdit = true,
+              onEdit = false,
               onOpenAndSave = true,
             },
-            -- diagnosticsDelay = 300,
+            diagnosticsDelay = 300,
             formatterLineLength = 80,
-            -- forwardSearch = {
-            --   args = { "--synctex-forward", "%l:1:%f", "%p" },
-            --   executable = "zathura",
-            --   onSave = true,
-            -- },
+            forwardSearch = {
+              args = { "--synctex-forward", "%l:1:%f", "%p" },
+              executable = "zathura",
+              onSave = true,
+            },
             latexFormatter = "latexindent",
             latexindent = {
               modifyLineBreaks = true,

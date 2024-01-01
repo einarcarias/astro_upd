@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
+  { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
   {
     "gbprod/yanky.nvim",
