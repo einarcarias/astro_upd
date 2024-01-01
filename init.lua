@@ -97,8 +97,8 @@ return {
             diagnosticsDelay = 300,
             formatterLineLength = 80,
             forwardSearch = {
-              args = { "--synctex-forward", "%l:1:%f", "%p" },
-              executable = "zathura",
+              args = {},
+              executable = "open-sumatra.sh",
               onSave = true,
             },
             latexFormatter = "latexindent",
