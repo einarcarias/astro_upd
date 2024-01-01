@@ -21,8 +21,20 @@ return {
           :with_cr(cond.none()),
       },
       -- disable for .vim files, but it work for another filetypes
-      Rule("a", "a", "-vim")
-      -- rule for autopairs to not close when \ is added
+      Rule("a", "a", "-vim"),
+      {
+        -- rule for autopairs to not close when \ is added
+        Rule("\\((%w*) $", "tex")
+          :replace_endpair(function(opts)
+            local beforeText = string.sub(opts.line, 0, opts.col)
+            local _, _, match = beforeText:find "\\((%w*)"
+            if match and #match > 0 then return " \\)" .. match end
+            return ""
+          end)
+          :with_move(cond.none())
+          :use_key("<space>")
+          :use_regex(true),
+      }
     )
   end,
 }
