@@ -86,7 +86,7 @@ return {
             bibtexFormatter = "texlab",
             build = {
               executable = "latexmk",
-              args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-c", "%f" },
+              args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
               forwardSearchAfter = true,
               onSave = true,
             },

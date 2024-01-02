@@ -31,7 +31,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>a"] = { name = "OpenAi" },
-    ["<leader>ao"] = { ":NeoAIToggle<cr>", desc = "Open/Close Prompt" },
+    ["<leader>aa"] = { ":NeoAIToggle<cr>", desc = "Open/Close Prompt" },
     -- to do
     ["<leader>fd"] = { ":TodoTelescope<cr>", desc = "find todo list" },
     -- search and replace
