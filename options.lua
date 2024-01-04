@@ -7,6 +7,7 @@ return {
     spell = true, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
+    textwidth = 80, -- sets vim.opt.textwidth
     linebreak = true,
     breakindent = true,
     spellfile = vim.api.nvim_call_function("stdpath", { "config" }) .. "/spell/en.utf-8.add",
