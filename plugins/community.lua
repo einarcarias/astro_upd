@@ -50,11 +50,11 @@ return {
         filetypes = {
           tex = false,
         },
-        -- suggestion = {
-        --   enabled = true,
-        --   auto_trigger = true,
-        --   debounce = 75,
-        -- },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 150,
+        },
       }
     end,
   },
