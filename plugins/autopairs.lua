@@ -40,9 +40,9 @@ return {
           cond.none()
         ),
     }
-    npairs.remove_rule("`", "tex")
-    npairs.remove_rule("(", "tex")
-    npairs.remove_rule("[", "tex")
-    npairs.remove_rule("{", "tex")
+    -- npairs.remove_rule("`", { "tex", "latex" })
+    -- npairs.remove_rule("(", { "tex", "latex" })
+    -- npairs.remove_rule("[", { "tex", "latex" })
+    -- npairs.remove_rule("{", { "tex", "latex" })
   end,
 }
