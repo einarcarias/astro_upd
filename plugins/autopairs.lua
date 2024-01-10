@@ -40,10 +40,10 @@ return {
           cond.none()
         ),
     }
-    npairs.add_rule(Rule("``", "``"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
-    npairs.add_rule(Rule("()", "()"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
-    npairs.add_rule(Rule("[]", "[]"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
-    npairs.add_rule(Rule("{}", "{}"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
+    npairs.add_rule(Rule("`", "`"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
+    npairs.add_rule(Rule("(", ")"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
+    npairs.add_rule(Rule("[", "]"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
+    npairs.add_rule(Rule("{", "}"):with_pair(cond.not_filetypes { { "tex", "latex" } }))
     -- npairs.remove_rule("`", { "tex", "latex" })
     -- npairs.remove_rule("(", { "tex", "latex" })
     -- npairs.remove_rule("[", { "tex", "latex" })
