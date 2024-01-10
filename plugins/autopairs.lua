@@ -43,5 +43,6 @@ return {
     npairs.remove_rule("`", "tex")
     npairs.remove_rule("(", "tex")
     npairs.remove_rule("[", "tex")
+    npairs.remove_rule("{", "tex")
   end,
 }
