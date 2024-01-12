@@ -61,11 +61,11 @@ return {
 
     config = {
       ltex = {
-        on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
         settings = {
           ltex = {
             language = "en-GB",
             diagnosticSeverity = "information",
+            disabledRules = { ["en-GB"] = { "OXFORD_SPELLING_Z_NOT_S" } },
             setenceCacheSize = 2000,
             additionalRules = {
               enablePickyRules = false,
@@ -76,6 +76,9 @@ return {
             completionEnabled = "true",
             checkFrequency = "edit",
             statusBarItem = "true",
+            dictionary = {
+              ["en-GB"] = { ":" .. vim.fn.stdpath "config" .. "/spell/en.utf-8.add" },
+            },
           },
         },
       },
