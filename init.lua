@@ -26,9 +26,6 @@ return {
     underline = true,
   },
   lsp = {
-    -- setup_handlers = {
-    --   ltex = function(_, opt) require("ltex-ls").setup { server = opt } end,
-    -- },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -58,10 +55,13 @@ return {
       -- "pyright"
       "ltex",
     },
+    plugins = {
+      "jhofscheier/ltex-utils.nvim",
+    },
 
     config = {
       ltex = {
-        -- on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
+        on_attach = function(_, bufnr) require("ltex-utils").on_attach(bufnr) end,
         settings = {
           ltex = {
             language = "en-GB",
