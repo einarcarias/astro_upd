@@ -17,6 +17,18 @@ return {
     mapleader = " ", -- sets vim.g.mapleader
     maplocalleader = ",", -- set localleader
     vimtex_view_method = "zathura", -- zathura to open pdf
+    vimtex_compiler_latexmk = {
+      exucutable = "latexmk",
+      options = {
+        "-pdf",
+        "-verbose",
+        "-file-line-error",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-extra-mem-bot=100000000",
+        "-shell-escape",
+      },
+    },
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
