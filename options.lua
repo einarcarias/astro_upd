@@ -25,6 +25,8 @@ return {
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
     -- vimtex settings
     vimtex_compiler_silent = true,
+    vimtex_compiler_method = "latexmk",
+    vimtex_compiler_latexmk = { options = { "-pdf", "-synctex=1", "-interaction=nonstopmode", "-shell-escape" } },
   },
 }
 -- If you need more control, you can use the function()...end notation

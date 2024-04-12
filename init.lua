@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "gruvbox-material",
+  colorscheme = "kanagawa",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -61,6 +61,13 @@ return {
 
     config = {
       ltex = {
+        -- on_attach = function(client, bufnr)
+        --   -- your other on_attach code
+        --   -- for example, set keymaps here, like
+        --   -- vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+        --   -- (see below code block for more details)
+        --   require("ltex-utils").on_attach(bufnr)
+        -- end,
         settings = {
           ltex = {
             language = "en-GB",
